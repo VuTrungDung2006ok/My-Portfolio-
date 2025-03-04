@@ -1,0 +1,583 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* Header */
+header {
+  background-color: #000;
+  padding: 20px 0;
+  text-align: center;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+header:hover {
+  background-color: #111;
+  opacity: 0.95;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+header h1:hover {
+  transform: scale(1.1);
+}
+
+header p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #e63946;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d62828;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(230, 57, 70, 0.5);
+}
+
+/* Sections */
+section {
+  padding: 50px 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 2.2em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+/* Skills List */
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.5em;
+  color: white;
+}
+
+li {
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
+/* Projects */
+.project {
+  background-color: #2d2d2d;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.project h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+.project a {
+  color: #e63946;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project a:hover {
+  color: #ff6b6b;
+}
+
+/* Contact */
+#contact a {
+  color: #e63946;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: #ff6b6b;
+}
+
+/* Image Gallery */
+.image-gallery {
+  display: flex;  /* Sắp xếp theo hàng ngang */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  flex-wrap: wrap; /* Nếu ảnh quá nhiều, tự động xuống dòng */
+  gap: 20px; /* Tạo khoảng cách giữa các ảnh */
+}
+
+.image-gallery img {
+  width: 450px; /* Điều chỉnh kích thước ảnh */
+  height: auto;
+  border-radius: 10px; /* Làm góc ảnh bo tròn nhẹ */
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 60%;
+  margin: auto;
+  text-align: left;
+  padding: 50px 0;
+}
+
+.about-text {
+  max-width: 50%;
+}
+
+.about-text h2 {
+  font-size: 2.2em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.about-section img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-section img:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-section img {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+/* Skills & Gallery Layout */
+#skills-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1100px;
+  gap: 50px;
+}
+
+.skills-box, .gallery-box {
+  flex: 1;
+  background-color: #2d2d2d;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Khoảng cách giữa video và ảnh */
+  max-width: 1100px; /* Đảm bảo không bị quá rộng */
+  margin: auto; /* Căn giữa */
+}
+
+.video, .gallery-box {
+  flex: 1; /* Chia đều kích thước */
+  max-width: 600px; /* Điều chỉnh để không quá to */
+  height: auto;
+}
+
+.video iframe {
+  width: 100%;
+  height: 70%;
+  aspect-ratio: 16 / 9; /* Đảm bảo tỷ lệ chuẩn */
+  border-radius: 10px;
+}
+
+.gallery-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Slide */
+.slide {
+  display: none;
+  text-align: center;
+  padding: 30px;
+  animation: fade 0.8s ease-in-out;
+}
+
+/* Hiệu ứng chuyển động */
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hiển thị slide hiện tại */
+.active {
+  display: block;
+}
+
+/* Slide Title */
+.slide h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+/* Slide Description */
+.slide p {
+  font-size: 1.2em;
+  color: #ddd;
+}
+
+/* Image Grid */
+.image-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-grid img {
+  width: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-grid img:hover {
+  transform: scale(1.1);
+}
+
+/* Căn giữa nội dung và giới hạn chiều rộng */
+.academic-achievements {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Bố cục tổng thể */
+.academic-achievements {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Tiêu đề */
+.academic-achievements h2 {
+  font-size: 2.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Văn bản chính */
+.achievements-text p {
+  font-size: 1.3em;
+  line-height: 1.8;
+  color: #ddd;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Nhấn mạnh nội dung quan trọng */
+.achievements-text strong {
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* Căn chỉnh ảnh cho đẹp */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.image-gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Nút điều hướng */
+.slider-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.slider-buttons button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.slider-buttons button:hover {
+  background-color: #d62828;
+  transform: scale(1.05);
+}
+/* Bố cục tổng thể */
+.extracurricular-activities {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Tiêu đề */
+.extracurricular-activities h2 {
+  font-size: 2.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Văn bản chính */
+.activities-text p {
+  font-size: 1.3em;
+  line-height: 1.8;
+  color: #ddd;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Nhấn mạnh nội dung quan trọng */
+.activities-text strong {
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* Căn chỉnh ảnh cho đẹp */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.image-gallery img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Nút điều hướng */
+.slider-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.slider-buttons button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.slider-buttons button:hover {
+  background-color: #d62828;
+  transform: scale(1.05);
+}
+/* Bố cục tổng thể */
+.sports-competitions {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Tiêu đề */
+.sports-competitions h2 {
+  font-size: 2.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Văn bản chính */
+.sports-text p {
+  font-size: 1.3em;
+  line-height: 1.8;
+  color: #ddd;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Nhấn mạnh nội dung quan trọng */
+.sports-text strong {
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* Căn chỉnh ảnh */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.image-gallery img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Nút điều hướng */
+.slider-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.slider-buttons button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.slider-buttons button:hover {
+  background-color: #d62828;
+  transform: scale(1.05);
+}
